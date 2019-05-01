@@ -5,6 +5,5 @@ function reverse(str) {
     strRev.push(strArr[i]);
   }
   return strRev.join('');
-  // console.log(str);
 }
 reverse('12');
