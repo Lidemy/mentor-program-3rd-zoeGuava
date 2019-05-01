@@ -19,8 +19,16 @@ function join(str, conacatStr) {
       result.push(str[i]);
     }
   }
-  // result = result.toString()
   return result.toString().replace(/,/g, '');
-  // console.log(finalResult)
 }
 join(['1st', '2nd', '3rd', '4th', '5th'], '!');
+
+function repeat(str, num) {
+  let result = '';
+  for (let i = 0; i < num; i += 1) {
+    result += str;
+  }
+  return result;
+}
+// 重複他！
+repeat('RoKo', 2);
