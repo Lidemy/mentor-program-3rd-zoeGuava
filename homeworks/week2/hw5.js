@@ -1,15 +1,3 @@
-// function join(str, concatStr) {
-//   return concatStr;
-// }
-
-// function repeat(str, times) {
-//   return times;
-// }
-
-// console.log(join('a', '!'));
-// console.log(repeat('a', 5));
-
-
 function join(str, conacatStr) {
   const result = [];
   for (let i = 0; i < str.length; i += 1) {
@@ -30,5 +18,4 @@ function repeat(str, num) {
   }
   return result;
 }
-// 重複他！
 repeat('RoKo', 2);
