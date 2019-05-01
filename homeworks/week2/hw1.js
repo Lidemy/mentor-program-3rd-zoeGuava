@@ -1,5 +1,9 @@
 function printStars(n) {
-  console.log(n);
+  if (n >= 1 && n <= 30) {
+    let i;
+    for (i = 1; i <= n; i += 1) {
+      console.log('*');
+    }
+  }
 }
-
-printStars(5);
+printStars(2);
