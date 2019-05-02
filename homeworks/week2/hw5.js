@@ -1,13 +1,12 @@
-function join(str, conacatStr) {
-  const result = [];
-  for (let i = 0; i < str.length; i += 1) {
-    if (i < str.length - 1) {
-      result.push(str[i] + conacatStr);
-    } else {
-      result.push(str[i]);
-    }
+function join(arr, conacatStr) {
+  if (arr.length === 0) {
+    return '';
   }
-  return result.toString().replace(/,/g, '');
+  let result = arr[0];
+  for (let i = 0; i < arr.length; i += 1) {
+    result += conacatStr + arr[i];
+  }
+  return console.log(result);
 }
 join(['1st', '2nd', '3rd', '4th', '5th'], '!');
 
