@@ -12,3 +12,5 @@ function stars(num) {
   return starsArray;
 }
 stars(3);
+
+module.exports = stars;
