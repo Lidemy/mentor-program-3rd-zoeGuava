@@ -4,7 +4,6 @@
 
 // module.exports = isPalindromes;
 
-
 function isPalindromes(str) {
   const strArr = str.split('');
   let strRev = [];
