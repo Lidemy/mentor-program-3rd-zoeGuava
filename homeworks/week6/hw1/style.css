@@ -1,0 +1,195 @@
+/*----index----
+ *---$universal
+ *---$block
+ *---$RWD
+ *---$modify
+---------------*/
+
+/*------- $universal -------*/
+
+* {
+	position: relative;
+	box-sizing: border-box;
+	font-weight: 300;
+	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"
+}
+
+/*------- $block -------*/
+
+.nav {
+	display: flex;
+	position: sticky;
+	align-items: center;
+	z-index: 1;
+	top: 0;
+	height: 50px;
+	text-align: center;
+	background-color: #333a40;
+}
+
+.nav--title {
+	display: inline-block;
+	width: 125px;
+	font-size: 1.5rem;
+	color: #fff;
+}
+
+.nav__menu {
+	font-size: 1.25rem;
+}
+
+.nav--elem {
+	display: inline-block;
+	padding: 0 10px;
+	color: #807f7f;
+	cursor: pointer;
+	transition: color .3s;
+}
+
+.nav--elem:hover {
+	color: #fff;
+}
+
+.main {
+	display: flex;
+	padding: 25px 0;
+	align-items: center;
+	background-color: #e9ecf0;
+}
+
+.main__container {
+	margin: 0 auto;
+	max-width: 960px;
+}
+
+.main__container--title {
+	font-size: 5.5rem;
+}
+
+.main__container--contents {
+	font-size: 1.25rem;
+}
+
+.main__container--btn {
+	padding: .5em;
+	background-color: #0d6bff;
+	font-size: 1.5rem;
+	color: #fff;
+}
+
+.section {
+	display: flex;
+	margin: 0 auto;
+	max-width: 960px;
+	padding: 50px 0;
+}
+
+.section__item {
+	width: 33.333%;
+}
+
+.section__item--title {
+	font-size: 2rem;
+}
+
+.section__item--contents {}
+
+.section__item--btn {
+	padding: .75em;
+	background-color: #6a757e;
+	font-size: 1.125rem;
+	color: #fff;
+}
+
+.footer {
+	margin: 0 auto;
+	padding: 20px 0;
+	max-width: 960px;
+	border-top: 1px solid #e3e3e3;
+}
+
+.footer--contents {}
+
+/*------- $RWD -------*/
+
+@media screen and (max-width: 960px) {
+	.nav {
+		height:35px;
+	}
+
+	.nav--title {
+		width: 100px;
+		font-size: 1.25rem;
+	}
+
+	.nav__menu {
+		font-size: 1rem;
+	}
+
+	.main__container {
+		margin: 0 2.5%;
+	}
+
+	.main__container--title {
+		font-size: 3rem;
+	}
+
+	.main__container--contents {
+		font-size: 1rem;
+	}
+
+	.main__container--btn {
+		padding: .75em;
+		font-size: 1rem;
+	}
+
+	.section {
+		display: block;
+		margin: 0 2.5%;
+		padding: 25px 0;
+	}
+
+	.section__item {
+		width: 100%;
+	}
+
+	.section__item:not(:first-child) {
+		padding-top: 25px;
+	}
+
+	.section__item--title {
+		font-size: 1.5rem;
+	}
+
+	.section__item--contents {}
+
+	.section__item--btn {
+		padding: .75em;
+		font-size: 1rem;
+	}
+
+	.footer {
+		margin: 0 2.5%;
+	}
+
+}
+
+
+/*------- $modify -------*/
+
+.btn-style {
+	display: inline-block;
+	border-radius: 7.5px;
+	cursor: pointer;
+	transition: opacity .3s
+}
+
+.btn-style:hover {
+	opacity: .85;
+}
+
+.btn-arrow::after {
+	content: " >>";
+	font-size: 1em;
+	font-family: initial;
+}
