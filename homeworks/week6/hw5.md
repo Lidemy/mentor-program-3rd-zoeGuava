@@ -20,6 +20,6 @@
 ## 請問 position: static, relative, absolute 跟 fixed 的差別是什麼？
 
 - static 為預設定位方式，依照瀏覽器本身的設定去排位置。
-- relative 相對定位方式，可以用 top, bottom, left, right 去改變位置，定位點為上一層的容器。
+- relative 相對定位方式，可以用 top, bottom, left, right 去改變位置，定位點為**自己本身**。
 - absolute 絕對定位，用這方式去定位的元素並不佔空間，就像浮起來一樣，可以任意改變位置不受其他元素的影響，其定位點為上一層「可被定位的容器」，若上一層也是絕對定位，則會再往上找可以當作參考點的容器。
 - fixed 固定定位方式，依照瀏覽器來定位。
