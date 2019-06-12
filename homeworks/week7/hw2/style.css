@@ -1,0 +1,119 @@
+* {
+	position: relative;
+	box-sizing: border-box;
+}
+.wrapper {
+	width: 100%;
+	background-color: rgb(248, 237, 230);
+}
+.bgTop {
+	position: absolute;
+	top: 0;
+	height: 225px;
+	width: 100%;
+	background-image: url(https://lh4.googleusercontent.com/sAvtic6WzLRcGC485d2irc6Q36VS9GaiIj2TjL9AkbD1t3RjwacfNkJmmUe9fh9c0WV-ZVKQcw=w1200);
+	background-size: cover;
+	background-position: center;
+}
+.main {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+.container {
+	margin-top: 100px;
+	padding: 17px;
+	max-width: 640px;
+	background-color: #fff;
+	border-top: 10px solid rgb(255, 137, 75);
+}
+.header {
+	padding: 0 34px;
+	margin-bottom: 22px;
+	font-size: 13px;
+}
+.header h3 {	font-size: 34px; font-weight: 400}
+.header span { color: #d93025; }
+.formWrapper {
+	padding: 0 17px;
+}
+.formContainer {
+	padding: 20px 17px;
+	margin-top: 2px;
+	transition: background-color 200ms cubic-bezier(0.0,0.0,0.2,1);
+}
+.formTitle {
+	font-size: 1.25em;
+}
+.formSubtitle {
+	font-size: 13px;
+}
+.formContent {
+	display: flex;
+	width: 100%;
+	height: 40px;
+	align-items: center;
+	padding: .5em .5em 0 0;
+	border: none;
+	border-bottom:1px solid #e7e7e7;
+	color: #888;
+	background-color: transparent;
+}
+.checkboxContainer {
+	margin-top: 15px;
+}
+.checkboxContainer label {
+	display: flex;
+	flex-direction: row;
+}
+.checkboxContainer .formContent {
+	margin-right: 15px;
+	width: auto;
+}
+.submitBtn {
+	color: #fff;
+	width: 88px;
+	height: 36px;
+	border-radius: 2.5px;
+	text-align: center;
+	line-height: 36px;
+	background-color: #1a73e8;
+}
+.submitBtn + p,
+.footer p {
+	font-size: 12px;
+	font-weight: 300;
+	color: #888;
+}
+.footer {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	padding: 35px 0;
+}
+.footerIcon {
+	display: flex;
+	align-items: center;
+	padding-top: 15px;
+	opacity: .5;
+	flex-direction: row;
+	font-size: 22px;
+}
+/*----------------------*/
+.star::after {
+	content: "*";
+	color: #d93025;
+	font-size: 1.25em;
+}
+.unEdit {
+	background-color: #fce8e6;
+}
+.unEdit::after {
+	content: '這是必填問題';
+	display: inline-block;
+	color: #d93025;
+	padding-top: 20px;
+}
+.unEdit .formContent {
+	border-bottom: 1px solid #d93025;
+}
