@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>week7 hw1 反應力小遊戲</title>
+	<link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+</head>
+<style>
+	.body {
+		width: 100%;
+		height: 100vh;
+	}
+	.title, .reloadBtn {
+		position: absolute;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	.title {
+		top: 45%;		
+		font-size: 46px;
+	}
+	.reloadBtn {
+		display: none;
+		top: 55%;
+	}
+</style>
+
+<body class="body">
+	
+	<div class="title">畫面變色時請點擊</div>
+	<button class="reloadBtn">再試一次</button>
+
+<script>
+	const body = document.querySelector('.body');	
+	
+	function switchColor() {
+		const color = `rgb(
+			${Math.floor(Math.random() * 256)},
+			${Math.floor(Math.random() * 256)},
+			${Math.floor(Math.random() * 256)})`;
+		body.style.backgroundColor = color;
+	}
+
+	const switchTime = Math.floor((Math.random() * 2000) + 1000);
+	const startTime = new Date();
+	const eventTime = setTimeout(switchColor, switchTime);
+
+	body.addEventListener('click', function msg() {
+		const reactTime = (new Date() - startTime - switchTime) / 1000;
+		if (reactTime > 0) {
+			alert('您的反應時間為：' + reactTime + '秒');
+			reloadBtn.style.display = 'block';
+		} else {
+			clearTimeout(eventTime);
+			alert('還沒有開始變色ㄛ，重來一次ㄅ～');
+			reloadBtn.style.display = 'block';
+		}
+		body.removeEventListener('click', msg); 
+	});
+
+	const reloadBtn = document.querySelector('.reloadBtn');
+	
+	reloadBtn.addEventListener('click', function() {
+		location.reload()
+		return
+	})
+</script>
+
+</body>
