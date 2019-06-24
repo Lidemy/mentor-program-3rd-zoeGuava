@@ -76,7 +76,7 @@ request.onload = () => {
     }
   } else {
     const alert = '系統不穩定，請再試一次';
-    alert();
+    alert(alert);
     // rewardError();
     // console.log('error');
   }
