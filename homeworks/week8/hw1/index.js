@@ -11,6 +11,7 @@ const thirdBg = 'linear-gradient(to right, rgba(30, 75, 115, 1),  rgba(255, 255,
 const thirdImg = 'url(https://www.stickpng.com/assets/images/580b57fcd9996e24bc43c548.png)';
 const noneBg = '#000';
 const noneImg = '#fff';
+const alert = '系統不穩定，請再試一次';
 
 function rewardFirst() {
   content.innerText = `恭喜你中頭獎了！
@@ -70,15 +71,11 @@ request.onload = () => {
         rewardNone();
         break;
       default:
-        // console.log('系統不穩定，請再試一次')
-        // rewardError();
+        alert(alert);
         break;
     }
   } else {
-    const alert = '系統不穩定，請再試一次';
     alert(alert);
-    // rewardError();
-    // console.log('error');
   }
 };
 
