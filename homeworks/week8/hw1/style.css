@@ -1,0 +1,134 @@
+* {
+	position: relative;
+	box-sizing: border-box;
+}
+.wrapper {
+	display: flex;
+	align-items: center;
+  justify-content: center;
+	width: 100%;
+	height: 100vh;
+}
+.side {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	width: 10%;
+	max-width: 100px;
+	height: 75%;
+	max-height: 650px;
+	writing-mode: vertical-lr;
+}
+.side .tab:nth-child(1) {
+	border-top: 1px solid #000;
+}
+.side .tab:nth-child(2) {
+	border-bottom: 1px solid #000;
+}
+.tab {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	border-left: 1px solid #000;
+	background-color: #fff;
+	cursor: pointer;
+}
+.tab.now {
+	background-color: #ffb322;
+}
+.container {
+	width: 75%;
+	max-width: 750px;
+	height: 75%;
+	max-height: 500px;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.bg {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 50%;
+	height: 75%;
+	background-size: contain;
+	background-position: right bottom;
+	background-repeat: no-repeat;
+}
+.title {
+	position: absolute;
+	top: 15%;
+	left: 0;
+	height: 125px;
+	min-width: 50%;
+	border: 1px solid #000;
+	background-color: rgba(256,256,256,.4);
+}
+.content {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0 25px;
+	height: 100%;
+	font-size: 2em;
+	text-align: center;
+}
+.btn {
+	position: absolute;
+	bottom: 25px;
+	left: 25px;
+	height: 100px;
+	width: 100px;
+	line-height: 90px;
+	text-align: center;
+	border-radius: 50%;
+	border: 10px solid #AC2832;
+	color: #fff;
+	background-color: #000;
+	cursor: pointer;
+	transition: all .3s;
+}
+.btn:hover {
+	line-height: 100px;
+	border: 3px solid #D29499;
+}
+
+/* ------------------------- */
+
+.chat {
+	height: 100%;
+	width: 100%;
+	background-color: #d5d5d5;
+	border:1px solid #000;
+	overflow-y: scroll;
+}
+.chatAdd {
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	padding: 10px 15px;
+	background-color: #d5d5d5;
+}
+.chatList {
+	display: flex;
+	flex-direction: column;
+}
+.chatRow {
+	display: flex;
+	margin-bottom: 1px;
+}
+.chatNum {
+	width: 125px;
+	text-align: center;
+	background-color:	#517dc7;
+	color: #fff;
+}
+.chatContent {
+	height: 100%;
+	width: 100%;
+	padding-left: 10px;
+	background-color: #437092;
+	color: #fff;
+}
