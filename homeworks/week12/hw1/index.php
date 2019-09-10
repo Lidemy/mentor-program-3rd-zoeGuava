@@ -68,41 +68,6 @@
 					?>
 				</div>
 				<div class="container_list">
-					<!-- <div class="row test_row">
-						<div class="comment_head">
-							<div class="set_btn">
-								<a href='#'>編輯</a>
-								<a href='#'>刪除</a>
-							</div>
-							<div class="comment_title">
-								<div class="title_nickname">暱稱</div>
-								<div class="title_comments">留言內容</div>
-								<div class="title_time">留言時間</div>
-							</div>
-							<div class="comment_main">
-								<div class="nickname">15315645</div
-								><div class="comments">氣泣泣泣泣</div
-								><div class="created_time">2077-07-07 17:17:07</div>
-							</div>
-							<div>其他人的回覆</div>
-							<div class="comment_sub">
-								<div class="set_btn">
-									<a href='#'>編輯</a>
-									<a href='#'>刪除</a>
-								</div>
-								<div>暱稱：sub排版用ㄉ</div>
-								<div>內容：sub氣泣泣泣泣</div>
-								<div>留言時間：2077-07-07 17:17:07</div>
-							</div>
-							<div class="comment_reply">
-								<div>帳號：</div>
-								<div>暱稱：</div>
-								<div>輸入留言內容：</div>
-								<textarea name="comments" rows="5" cols="35" class="edit_comments"></textarea>
-								<input type="submit" value="送出">
-							</div>
-						</div>
-					</div> -->
 					<!-- 留言板 -->
 					<?php
 					  // $start 是在 page.php 裡面的 $start = ($page-1) * $limit;
@@ -136,7 +101,7 @@
 										SELECT * 
 										FROM zoeGuava_comments as c 
 										WHERE c.parent_id = $row[id]
-										ORDER BY created_at DESC
+										ORDER BY created_at ASC
 									";
 								$result_sub = $conn->query($sql_sub);
 								if ($result_sub->num_rows > 0) {
