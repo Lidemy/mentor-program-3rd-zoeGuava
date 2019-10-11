@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<!-- RWD -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- reset css -->
+	<link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+	<!-- bootstrap css -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<!-- custom css -->
+	<link rel="stylesheet" href="style.css">
+	<title>week13 hw2 ToDoList</title>
+</head>
+<body>
+	<div class="wrapper">
+		<h1 class="text-center text-light mt-5">ToDoList</h1>
+		<div class="container">
+			<div class="card">
+			  <div class="card-header">
+			    <input type="text" style="width: 90%;" placeholder="輸入待辦事項">
+				  <button type="button" class="u-add float-right btn btn-dark btn-md">新增</button>
+			  </div>
+				<ul class="list-group">
+					<li class="list-group-item">
+					  <button type="button" class="u-switch btn btn-primary btn-sm"></button>
+				  	買一架直升飛機
+					  <button type="button" class="u-delete float-right btn btn-outline-danger btn-sm ">刪除</button>
+					</li>
+					<li class="list-group-item">
+					  <button type="button" class="u-switch btn btn-primary btn-sm active"></button>
+				  	出生後會哭
+					  <button type="button" class="u-delete float-right btn btn-outline-danger btn-sm">刪除</button>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<!-- 自訂 JS -->
+	<script>
+		$(document).ready(() => {
+		  // 刪除事項
+		  function deleteList() {
+		    $('.u-delete').click((e) => {
+		      if (e.target.classList.contains('u-delete')) {
+		        const deleteTarget = e.target.closest('.list-group-item');
+		        deleteTarget.remove();
+		      }
+		    });
+		  }
+		  // 切換已完成、未完成
+		  function switchStatus() {
+		    $('.list-group').click((e) => {
+		      const switchTarget = e.target.closest('.u-switch');
+		      switchTarget.classList.toggle('active');
+		    });
+		  }
+		  // 新增事項
+		  function addList() {
+		    $('.u-add').click((e) => {
+		      const addContent = e.target.previousElementSibling.value;
+		      if (!addContent) {
+		        const msg = '請輸入待辦事項';
+		        window.alert(msg);
+		      }
+		      const newListItem = `
+		        <li class="list-group-item">
+		          <button type="button" class="u-switch btn btn-primary btn-sm"></button>
+		          ${addContent}
+		          <button type="button" class="u-delete float-right btn btn-outline-danger btn-sm">刪除</button>
+		        </li>
+		      `;
+		      $('.list-group').append(newListItem);
+		      deleteList();
+		    });
+		  }
+		  addList();
+		  deleteList();
+		  switchStatus();
+		});
+	</script>
+</body>
+</html>
