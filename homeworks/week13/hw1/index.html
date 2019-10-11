@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+	<title>week13 hw1 Basic Grid</title>
+
+  <style>
+  	* {
+  		position: relative;
+  		box-sizing: border-box;
+  		transition: all .4s;
+  	}
+  	.container {
+  		margin: 25px auto 0;
+  		max-width: 960px;
+  	}
+  	.rwd {
+		  display: inline-block;
+		  height: 3rem;
+		  line-height: 3rem;
+		  border-radius: 10px;
+		  text-align: center;
+		  background-color: #fd9696;
+  		border: 1px solid #fff;
+  	}
+  	.title-md,
+  	.title-lg{
+  		display: none;
+  		margin: 0 auto;
+  		text-align: center;
+  	}
+  	@media screen and (min-width:0px) and (max-width:720px) {
+	  	h1::after { content: ' - max-width: 720px'; }
+	  	.title-md { display: block; }
+			.col-md-1  { width: calc(100%/12*1); }
+			.col-md-2  { width: calc(100%/12*2); }
+			.col-md-3  { width: calc(100%/12*3); }
+			.col-md-4  { width: calc(100%/12*4); }
+			.col-md-5  { width: calc(100%/12*5); }
+			.col-md-6  { width: calc(100%/12*6); }
+			.col-md-7  { width: calc(100%/12*7); }
+			.col-md-8  { width: calc(100%/12*8); }
+			.col-md-9  { width: calc(100%/12*9); }
+			.col-md-10 { width: calc(100%/12*10); }
+			.col-md-11 { width: calc(100%/12*11); }
+			.col-md-12 { width: calc(100%/12*12); }
+  	}
+  	@media screen and (min-width:720px) {
+	  	h1::after { content: ' - min-width: 720px'; }
+	  	.title-lg { display: block; }
+			.col-lg-1  { width: calc(100%/12*1); }
+			.col-lg-2  { width: calc(100%/12*2); }
+			.col-lg-3  { width: calc(100%/12*3); }
+			.col-lg-4  { width: calc(100%/12*4); }
+			.col-lg-5  { width: calc(100%/12*5); }
+			.col-lg-6  { width: calc(100%/12*6); }
+			.col-lg-7  { width: calc(100%/12*7); }
+			.col-lg-8  { width: calc(100%/12*8); }
+			.col-lg-9  { width: calc(100%/12*9); }
+			.col-lg-10 { width: calc(100%/12*10); }
+			.col-lg-11 { width: calc(100%/12*11); }
+			.col-lg-12 { width: calc(100%/12*12); }
+  	}
+  </style>
+</head>
+<body>
+	<h1 style="text-align: center;">Grid System</h1>
+  <div class="container">
+		<h3 class="title-md">4:1:7</h3>
+		<h3 class="title-lg">2:7:3</h3>
+  	<div class="rwd col-md-4 col-lg-2">A</div
+  	><div class="rwd col-md-1 col-lg-7">B</div
+  	><div class="rwd col-md-7 col-lg-3">C</div>
+	</div>
+	<div class="container">
+		<h3 class="title-md">2:8:2</h3>
+		<h3 class="title-lg">7:4:1</h3>
+  	<div class="rwd col-md-2 col-lg-7">D</div
+  	><div class="rwd col-md-8 col-lg-4">E</div
+  	><div class="rwd col-md-2 col-lg-1">F</div>
+	</div>
+	<div class="container">
+		<h3 class="title-md">8:4</h3>
+		<h3 class="title-lg">6:6</h3>
+  	<div class="rwd col-md-8 col-lg-6">G</div
+  	><div class="rwd col-md-4 col-lg-6">H</div>
+  </div>
+</body>
+</html>
