@@ -1,0 +1,26 @@
+* {
+	position: relative;
+	box-sizing: border-box;
+}
+/* layout */
+body {
+	background-color: #152c44;	
+}
+.wrapper {
+	height: 100%;
+	width: 100%;
+}
+.container {
+	height: 500px;
+	width: 720px;
+}
+.u-switch:after {
+	content: '未完成';
+}
+.u-switch.active:after {
+	content: '已完成';
+}
+.u-switch.active {
+	background-color: #6c757d !important;
+	border-color: #6c757d !important;
+}
