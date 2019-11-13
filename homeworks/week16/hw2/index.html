@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>week16 hw2</title>
+</head>
+<body>
+hw2：實作出 Stack 與 Queue
+
+請你實作出Stack跟Queue兩個 Function（或是 Class），讓以下程式碼可以順利執行： （禁止使用內建函式push與pop）
+
+<script>
+	class Stack {
+	  constructor() {
+	  	const array = [];
+	    this.array = array;
+	  }
+	  push(insert) {
+	    this.array.unshift(insert);
+	  }
+	  pop() {
+	    return this.array.shift();
+	  }
+	}
+
+	var stack = new Stack();
+	stack.push(10);
+	stack.push(5);
+	console.log(stack.pop()); // 5
+	console.log(stack.pop()); // 10
+
+  class Queue {
+  	constructor() {
+  		const array = [];
+  		this.array = array;
+  	}
+  	push(insert) {
+	    this.array.unshift(insert);
+	  }
+  	pop() {
+  		const last = this.array.length - 1;
+  		let popNum = this.array[last];
+			this.array.splice(last);
+			return popNum;
+  	}
+  }
+
+	var queue = new Queue();
+	queue.push(1)
+	queue.push(2)
+	console.log(queue.pop()) // 1
+	console.log(queue.pop()) // 2
+
+</script>
+</body>
+</html>
